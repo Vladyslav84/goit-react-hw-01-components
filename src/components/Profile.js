@@ -2,8 +2,6 @@ import React from 'react';
 import defaultImg from './images/default-img.jpg';
 import PropTypes from 'prop-types';
 
-console.log(defaultImg);
-
 const Profile = (props) => {
 
     return (
