@@ -1,4 +1,8 @@
 import React from 'react';
+import defaultImg from './images/default-img.jpg';
+import PropTypes from 'prop-types';
+
+console.log(defaultImg);
 
 const Profile = (props) => {
 
@@ -32,6 +36,22 @@ const Profile = (props) => {
             </ul>
         </div>
     )
-}
+};
+
+Profile.defaultProps = {
+
+    avatar: defaultImg,
+};
+
+Profile.propTypes = {
+
+    avatar: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    profileFollowers: PropTypes.number.isRequired,
+    profileViews: PropTypes.number.isRequired,
+    profileLikes: PropTypes.number.isRequired,
+};
 
 export default Profile;
