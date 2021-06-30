@@ -4,16 +4,12 @@ import PropTypes from 'prop-types';
 const Statistics = (props) => {
 
     return (
-        <section className="statistics">
-            <h2 className="title">{props.title}</h2>
 
-            <ul className="stat-list">
-                <li className="item">
-                    <span className="label">{props.label}</span>
-                    <span className="percentage">{props.percentage}</span>
-                </li>
-            </ul>
-        </section>
+        <>
+            <span className="label">{props.label}</span>
+            <span className="percentage">{props.percentage}</span>
+        </>
+
     )
 };
 

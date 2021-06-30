@@ -7,8 +7,7 @@ import FriendsList from './components/FriendsList';
 import friendsData from './friends.json';
 import TransactionHistory from './components/TableHead';
 import transactions from './transactions.json';
-
-console.log(typeof { FriendsList })
+import s from './css/Statistics.module.css'
 
 const App = () => {
     return (
@@ -23,20 +22,24 @@ const App = () => {
                 profileLikes={profileUser.stats.likes}
 
             />
-            <ul>
-                {statisticalData.map((statData) => (
-                    <li key={statData.id}>
-                        <Statistics
-                            id={statData.id}
-                            title={statData.title}
-                            label={statData.label}
-                            percentage={statData.percentage}
-                        />
+            <section className={s.wrapper}>
+                <h2 className="title">Upload stats</h2>
+                <ul className="stat-list">
+                    {statisticalData.map((statData) => (
+                        <li key={statData.id} className="item">
+                            <Statistics
+                                id={statData.id}
+                                title={statData.title}
+                                label={statData.label}
+                                percentage={statData.percentage}
+                            />
 
-                    </li>
-                ))}
+                        </li>
+                    ))}
 
-            </ul>
+                </ul>
+            </section>
+
             <FriendsList friendsArray={friendsData} />
             <TransactionHistory transactionArray={transactions} />
         </div>
