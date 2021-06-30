@@ -1,0 +1,28 @@
+.container {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.transactionHistory {
+  display: inline-block;
+  justify-content: center;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.th {
+  width: 320px;
+  background-color: rgb(89, 231, 241);
+  color: white;
+  height: 60px;
+}
+.td {
+  color: rgb(194, 183, 183);
+  height: 50px;
+  padding-left: 100px;
+}
+.trow:nth-child(1n) {
+  background-color: white;
+}
+.trow:nth-child(2n) {
+  background-color: grey;
+}

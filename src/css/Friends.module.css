@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  /* background-color: red; */
+}
+.friendsList > .friendItem {
+  display: flex;
+  margin: 5 auto;
+  /* padding: 5 10; */
+  /* justify-content: center; */
+  height: fit-content;
+  box-shadow: violet;
+  /* background-color: teal; */
+  align-items: center;
+  width: 320px;
+  margin: 5px;
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+.friendsList {
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 0 auto;
+  padding: 30px;
+}
+.friendStatus {
+  width: 10px;
+  height: 10px;
+  background-color: teal;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.name {
+  font-weight: 500;
+}

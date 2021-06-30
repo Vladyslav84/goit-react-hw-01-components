@@ -1,0 +1,35 @@
+.wrapper {
+  background-color: rgba(209, 204, 228, 0.562);
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.mainSection {
+  background-color: white;
+  width: 350px;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 50 0px;
+}
+
+.statList {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  padding: 10px;
+}
+
+.label {
+  color: white;
+}
