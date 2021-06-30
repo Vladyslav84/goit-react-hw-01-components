@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import defaultImg from './images/default-img.jpg';
-import s from '../css/Friends.module.css'
 
 const FriendCard = (props) => (
-    <>
+    <div>
         <span className="status"></span>
         <img className="avatar" src={props.avatar} alt={props.name} width="48" />
-        <p className={s.name}>{props.name}</p>
-    </>
+        <p className="name">{props.name}</p>
+    </div>
 )
 
 FriendCard.defaultProps = {
