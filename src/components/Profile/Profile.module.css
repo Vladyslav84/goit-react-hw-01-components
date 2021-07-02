@@ -14,8 +14,8 @@
 
 .stats {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  /* flex-direction: row;
+  justify-content: space-between; */
   padding: 0 15px;
   background-color: rgb(245, 240, 239);
 }
@@ -47,4 +47,8 @@
   align-content: center;
   margin: auto;
   height: 150px;
+}
+.statsWrapper {
+  display: flex;
+  justify-content: center;
 }
