@@ -1,23 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import defaultImg from './images/default-img.jpg';
+import defaultImg from '../images/default-img.jpg';
 
-const FriendCard = (props) => (
-    <div>
+
+const FriendListItem = (props) => (
+    <>
         <span className="status"></span>
         <img className="avatar" src={props.avatar} alt={props.name} width="48" />
-        <p className="name">{props.name}</p>
-    </div>
+        <p style={{ marginLeft: '10px' }} >{props.name}</p>
+    </>
 )
 
-FriendCard.defaultProps = {
+FriendListItem.defaultProps = {
 
     avatar: defaultImg,
 };
 
-FriendCard.propTypes = {
+FriendListItem.propTypes = {
     avatar: PropTypes.string,
     name: PropTypes.string.isRequired,
 };
 
-export default FriendCard;
+export default FriendListItem;

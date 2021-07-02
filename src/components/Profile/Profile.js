@@ -3,8 +3,11 @@ import defaultImg from '../images/default-img.jpg';
 import PropTypes from 'prop-types';
 import s from './Profile.module.css'
 
-const Profile = ({name, tag, location, avatar, stats}) => {
+// import profileUser from '../../../src/profile.json';
 
+// console.log(profileUser.stats.followers);
+
+const Profile = ({ avatar, name, tag, location, stats }) => {
     return (
         <div className={s.wrapper}>
             <div className={s.profile}>
@@ -16,9 +19,9 @@ const Profile = ({name, tag, location, avatar, stats}) => {
                 <p className={s.name}> {name}</p>
                 <p className={s.tag}>{tag}</p>
                 <p className={s.location}> {location}</p>
-                
+
                 <ul className={s.stats}>
-                    {/* <li>
+                    <li>
                         <span className="label">Followers </span><br />
                         <span className={s.quantity}>{stats.followers}</span>
                     </li>
@@ -29,50 +32,29 @@ const Profile = ({name, tag, location, avatar, stats}) => {
                     <li>
                         <span className="label">Likes </span><br />
                         <span className={s.quantity}>{stats.likes}</span>
-                    </li> */}
+                    </li>
                 </ul>
             </div>
 
         </div>
     )
 };
+Profile.propTypes = {
 
-// const Stats = (props) => {
-//     return (
-//         <div className={s.statsWrapper}>
-//              <ul className={s.stats}>
-//                     <li>
-//                         <span className="label">Followers </span><br />
-//                         <span className={s.quantity}>{props.profileFollowers}</span>
-//                     </li>
-//                     <li>
-//                         <span className="label">Views </span><br />
-//                         <span className={s.quantity}>{props.profileViews}</span>
-//                     </li>
-//                     <li>
-//                         <span className="label">Likes </span><br />
-//                         <span className={s.quantity}>{props.profileLikes}</span>
-//                     </li>
-//                 </ul>
-//              </div>
-//           )
-// }
+    avatar: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
+        views: PropTypes.number.isRequired,
+        followers: PropTypes.number.isRequired,
+        likes: PropTypes.number.isRequired,
+    }).isRequired,
+};
 
-// Profile.defaultProps = {
+Profile.defaultProps = {
 
-//     avatar: defaultImg,
-// };
-
-// Profile.propTypes = {
-
-//     avatar: PropTypes.string,
-//     name: PropTypes.string.isRequired,
-//     tag: PropTypes.string.isRequired,
-//     location: PropTypes.string.isRequired,
-//     profileFollowers: PropTypes.number.isRequired,
-//     profileViews: PropTypes.number.isRequired,
-//     profileLikes: PropTypes.number.isRequired,
-// };
+    avatar: defaultImg,
+};
 
 export { Profile };
-    

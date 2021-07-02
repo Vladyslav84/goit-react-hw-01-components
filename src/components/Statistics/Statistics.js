@@ -4,26 +4,24 @@ import s from './Statistics.module.css';
 
 const backGround = ["green", "blue", "gray", "yellow", "orange", "purple", "pink"];
 
-const Statistics = ({title, stats}) => {
+const Statistics = ({ title, stats }) => {
 
     return (
-            <section className={s.wrapper}>
-                <div className={s.mainSection}>
-                <h2 className={s.title}>{ title}</h2>
+        <section className={s.wrapper}>
+            <div className={s.mainSection}>
+                <h2 className={s.title}>{title}</h2>
                 <ul className={s.statList}>
                     {stats.map((statData) => (
-                        <li key={statData.id} className={s.item} style={{ backgroundColor: true ? backGround[Math.floor(Math.random() * backGround.length)]: 'teal'}}>
-                     <span className={s.label}>{statData.label}</span><br />
+                        <li key={statData.id} className={s.item} style={{ backgroundColor: true ? backGround[Math.floor(Math.random() * backGround.length)] : 'teal' }}>
+                            <span className={s.label}>{statData.label}</span><br />
                             <span className={s.percentage}>{statData.percentage}%</span>
-                            
                         </li>
                     ))}
-
                 </ul>
-              </div>
-            </section> 
+            </div>
+        </section>
     )
-    
+
 };
 
 Statistics.defaultProps = {
